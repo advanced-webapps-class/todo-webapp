@@ -11,7 +11,8 @@
   <header>
     <h1>Todo List</h1>
 
-    <form class="new-task">
+    <!-- submit를 막기위해 return false처리 -->
+    <form class="new-task" onsubmit="return false">
       <input type="text" name="text" placeholder="할일을 입력하세요"
              id="todoString">
     </form>

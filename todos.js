@@ -11,3 +11,10 @@ function getDom(id){
 var todoStringField = getDom('todoString');
 
 console.log( todoStringField);
+
+todoStringField.addEventListener('keyup', function (event) {
+
+  console.log('todoStringField keyup!');
+
+
+});
