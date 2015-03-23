@@ -16,5 +16,16 @@ todoStringField.addEventListener('keyup', function (event) {
 
   console.log('todoStringField keyup!');
 
+  //엔터키를 입력하면
+  if(event.keyCode === 13){
+    console.log(todoStringField.value);
+
+    var newTodo = todoStringField.value;
+    todoStringField.value = "";
+
+    console.log('새로운 todo:', newTodo);
+
+  }
+
 
 });
