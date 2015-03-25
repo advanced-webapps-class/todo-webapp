@@ -105,6 +105,10 @@ li.private {
 header .hide-completed {
   float: right;
 }
+.toggle-checked:checked ~ .text {
+    text-decoration: line-through;
+    color: #ddd;
+}
 
 .toggle-private {
   margin-left: 5px;
