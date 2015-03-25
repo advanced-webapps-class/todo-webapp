@@ -18,7 +18,16 @@ function addTodo(event) {
 
   console.log('새로운 todo:', newTodo);
 
-  var listDom = getDom('todoList');
-
   listDom.innerHTML += tmpl(todoTemplateHtml, {todo: newTodo});
+
+  saveData(listDom.innerHTML);
+}
+
+function loadData() {
+  console.log('loadData()');
+  return localStorage.getItem('todoHtml');
+}
+function saveData(html) {
+  console.log('saveData()');
+  localStorage.setItem('todoHtml', html);
 }
