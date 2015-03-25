@@ -20,10 +20,5 @@ function addTodo(event) {
 
   var listDom = getDom('todoList');
 
-  listDom.innerHTML += ' \
-        <li>\
-            <button class="delete">×</button>\
-            <input type="checkbox" class="toggle-checked">\
-            <span class="text"> ' + newTodo + ' </span>\
-        </li>';
+  listDom.innerHTML += tmpl(todoTemplateHtml, {todo: newTodo});
 }
