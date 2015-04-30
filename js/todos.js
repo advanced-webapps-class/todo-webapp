@@ -1,10 +1,7 @@
 //start...
 
-//개발자도구에서 메세지확인
-// console.log('todos.js');
-
-
 (function($, global){
+
 
   var $todoStringField = $('#todoString');
   var $listDom = $('#todoList');
@@ -15,24 +12,22 @@
 
 
   // //삭제버튼 이벤트 잡기 위해 상위에서 이벤트 listen 하기
-  // listDom.addEventListener('click', checkDelete);
-
   $listDom.on('click', '.delete', function(event){
 
     console.log('delete')
 
     var $deleteBtn = $(event.target);
+    var id = $deleteBtn.parent().data('id');
 
-    $deleteBtn.parent().remove();
-
-
-    saveData( $listDom.html() );
+    collection.remove( id );
 
   });
 
   // //처음 로딩시에 기존에 저장된 데이터 가져와서 보여주기
-  // listDom.innerHTML = loadData();
-  $listDom.html( loadData() );
+  todos = storage.load();
+
+  view.render();
+
 
 
 })(jQuery, window);
