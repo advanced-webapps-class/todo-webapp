@@ -1,38 +1,28 @@
 
 
-function addTodo(event) {
 
-  console.log('todoStringField keyup!');
+(function(app) {
 
+  app.util = {
+    uniqId: function() {
+      return new Date().getTime();
+    },
+    storage : {
+      load: function () {
+        console.log('storage.load()');
+        return JSON.parse(localStorage.getItem(app.storageKey) || "[]");
+      },
+      save: function (event, data) {
+        console.log('storage.save()');
+        localStorage.setItem(app.storageKey, JSON.stringify(data));
 
-  var $field = $(event.currentTarget);
-  var fieldValue = $field.val();
-
-  if (event.keyCode !== 13 || fieldValue === "") {
-
-    console.log('event stop')
-    return false;
-  }
-
-
-  $field.val('');
-
-  var id = new Date().getTime();
-
-
-console.log(id);
-
-  var todo  = $.extend({}, Todo.model, {
-    id: id,
-    title: fieldValue
-  });
-
-  console.log('new​ todo.model:', todo);
+      }
+    }
+  };
 
 
+  app.$wrap.on('addCollection', app.util.storage.save);
+  app.$wrap.on('removeCollection', app.util.storage.save);
 
-  collection.add( todo );
+})(Todo);
 
-  // renderTodos(todos);
-  // saveData( todos );
-}

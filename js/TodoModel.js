@@ -1,6 +1,9 @@
-var Todo = {
-  model : {
+(function(app){
+
+  app.model = {
+
     id: '',
     title: ''
-  }
-};
+
+  };
+})(Todo);
