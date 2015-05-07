@@ -1,0 +1,19 @@
+{
+  "name": "todo-webapp",
+  "version": "1.0.0",
+  "description": "> 간단한 Todo 리스트 관리 웹어플리케이션을 만들어 본다",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/advanced-webapps-class/todo-webapp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/advanced-webapps-class/todo-webapp/issues"
+  },
+  "homepage": "https://github.com/advanced-webapps-class/todo-webapp"
+}
