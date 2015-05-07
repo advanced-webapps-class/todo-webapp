@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/advanced-webapps-class/todo-webapp/issues"
   },
-  "homepage": "https://github.com/advanced-webapps-class/todo-webapp"
+  "homepage": "https://github.com/advanced-webapps-class/todo-webapp",
+  "devDependencies": {
+    "grunt": "^0.4.5",
+    "grunt-contrib-uglify": "^0.9.1"
+  }
 }
