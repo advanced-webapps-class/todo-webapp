@@ -5,7 +5,7 @@
 
 ## 준비하기
 
-[기본 프로그램 설치](https://advanced-webapps-class.github.io/front-end-start/intro/ready.html)
+[기본 프로그램 설치](https://begin.js.org/intro/ready.html)
 
 
 ## 기본 소스설치 및 로컬 웹서버 올리기
